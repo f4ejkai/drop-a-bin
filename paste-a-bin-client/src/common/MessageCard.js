@@ -20,7 +20,7 @@ function MessageCard({
       for (let t = now; t < expireTs; t += 1000) {
         timeouts.push(
           setTimeout(() => {
-            setSecondsLeft(Math.ceil((expireTs - t) / 1000));
+            setSecondsLeft(Math.ceil((expireTs - t) / 1000)); #time out might be too long here
           }, t - now)
         );
       }
